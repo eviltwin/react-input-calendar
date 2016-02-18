@@ -12,6 +12,7 @@ import Util from './util'
 module.exports = React.createClass({
 
     propTypes: {
+        className: React.PropTypes.string,
         closeOnSelect: React.PropTypes.bool,
         computableFormat: React.PropTypes.string,
         strictDateParsing: React.PropTypes.bool,
@@ -305,7 +306,7 @@ module.exports = React.createClass({
         }
 
         return (
-            <div className="input-calendar">
+            <div className={cs("input-calendar", this.props.className)}>
               <input
                 className={this.props.inputFieldClass}
                 id={this.props.inputFieldId}
